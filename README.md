@@ -1,24 +1,25 @@
-# README
+## Pangolin Rails app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app uses Ruby 2.5.1 and Rails 5.2.4.1.
 
-Things you may want to cover:
+## How to use this fancy app
 
-* Ruby version
+Clone the repo and then install the required gems:
 
-* System dependencies
+```
+$ bundle install
+```
 
-* Configuration
+Run the test suite to verify that everything is working correctly:
 
-* Database creation
+```
+$ rails t
+```
 
-* Database initialization
+If the test suite passes, you'll be ready to run the app in a local server:
 
-* How to run the test suite
+```
+$ rails s
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Then use curl or a browser to search in exactly the way as prescribed in the spec, at localhost:9292.
