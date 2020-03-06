@@ -6,7 +6,7 @@ class MoviesControllerTest < ActionDispatch::IntegrationTest
     @actors = ['Cary Grant', "Sean Connery", "Judi Dench", 'Daniel Day-Lewis',
        'Sacha Baron Cohen', 'Helena Bonham Carter', 'Ryan Reynolds', 'Agha', 'Madonna', 'Michelle Williams' ].map { |n| n.gsub(" ","_")}
     @films = ['Home Alone', 'Hellraiser', 'Gangs of New York', 'The Avengers',
-      'Die Hard', 'Vertigo', 'The Lord of the Rings'].map { |n| n.gsub(" ","_")}
+      'Die Hard', 'Vertigo', 'Django Unchained'].map { |n| n.gsub(" ","_")}
       Rails.cache.clear
   end
 

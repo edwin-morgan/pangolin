@@ -33,7 +33,7 @@ module SparqlQueries
             SELECT ?film ?starring WHERE {
             ?film a dbo:Film.
             ?film rdfs:label ?y .
-            ?film foaf:name "Lion King"@en.
+            ?film foaf:name "#{value}"@en.
             ?film dbo:starring ?starring.
             }
           }
@@ -75,7 +75,7 @@ module SparqlQueries
       results.map! { |el| { title: el.title.to_s, actor: el.actors.to_s } }.
               each do |v|
                 if data[v[:title]].present?
-                  data[v[:title]][:actors] << v[:actor]
+                  data[v[:title]][:actors] << v[:actor] unless data[v[:title]][:actors].include?(v[:actor])
                 else
                   data[v[:title]] = { actors: [v[:actor]] }
                 end
